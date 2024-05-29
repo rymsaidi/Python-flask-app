@@ -1,0 +1,14 @@
+deployment:
+  replicas: 2
+  image:
+    owner: rymsaidi
+    repository: pythonflaskapp
+    tag: b20c96ff17356d30aa73f21358bc40e3fd89f75f
+  container:
+    name: pythonflaskapp
+    port: 80
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30112
